@@ -52,6 +52,7 @@ const Planet = () => {
           <ul className="flex gap-6 uppercase text-light">
             {planetsName.map((planet) => (
               <li
+              key={planet.name}
                 className={`${planet.name.toLowerCase() === planetName ? "border-b-4 text-white" : ""} py-2`}
               >
                 <Link to={`/destination/${planet.name.toLowerCase()}`}>

@@ -7,7 +7,7 @@ import logo from "../assets/shared/logo.svg";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const location = useLocation();
-
+  
   return (
     <header className="flex items-center justify-between py-6 md:pt-0 lg:pt-10">
       <div className="flex items-center px-10 lg:pl-16 lg:pr-0">
@@ -47,7 +47,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li
-              className={`underline-indicators ${location.pathname === "/destination" ? "active" : ""}`}
+              className={`underline-indicators ${location.pathname.startsWith("/destination") ? "active" : ""}`}
             >
               <Link
                 to="/destination"
@@ -58,7 +58,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li
-              className={`underline-indicators ${location.pathname === "/crew" ? "active" : ""}`}
+              className={`underline-indicators ${location.pathname.startsWith("/crew") ? "active" : ""}`}
             >
               <Link
                 to="/crew"
@@ -69,7 +69,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li
-              className={`underline-indicators ${location.pathname === "/technology" ? "active" : ""}`}
+              className={`underline-indicators ${location.pathname.startsWith("/technology") ? "active" : ""}`}
             >
               <Link
                 to="/technology"
