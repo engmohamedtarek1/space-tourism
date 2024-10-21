@@ -5,7 +5,7 @@ import Destination from "./components/Destination";
 import Crew from "./components/Crew";
 import Technology from "./components/Technology";
 import Layout from "./components/Layout";
-import Planet from "./components/Planet"; // استيراد مكون Planet
+import Planet from "./components/Planet";
 import "./App.css";
 
 const App = () => {
