@@ -55,7 +55,7 @@ const Technologies = () => {
 
         <div className="flex flex-col items-center md:gap-4 lg:items-start lg:gap-6">
           <div className="font-serif uppercase">
-            <p className="text-40000 text-white/50 md:text-[1.5rem] lg:text-600">
+            <p className="text-300 text-white/50 md:text-[1.5rem] lg:text-600">
               THE TERMINOLOGY…
             </p>
             <p className="text-[1.5rem] md:text-[2.5rem] lg:text-700">
