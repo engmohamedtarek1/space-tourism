@@ -11,10 +11,8 @@ const Crew = () => {
   return (
     <div className="flex flex-col gap-12 p-6 text-center lg:ml-36 lg:text-left">
       {/* Title */}
-      <div className="tracking-[0.1rem] md:self-start md:pl-4 lg:pl-0">
-        <span className="pr-4 font-bold opacity-25">
-          0{currentCrewIndex + 1}
-        </span>
+      <div className="tracking-[0.1rem] md:self-start md:pl-4 lg:pl-0 lg:text-500">
+        <span className="pr-4 font-bold opacity-25">02</span>
         MEET YOUR CREW
       </div>
 

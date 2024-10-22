@@ -129,7 +129,7 @@ export const crew: CrewMember[] = [
   }
 ];
 
-export const technology: Technology[] = [
+export const technologies: Technology[] = [
   {
     name: "Launch vehicle",
     images: {
