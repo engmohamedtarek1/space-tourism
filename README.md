@@ -1,6 +1,6 @@
 # Frontend Mentor - Space tourism website solution
 
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -30,71 +30,136 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Home](./src//assets/screenshots/screenshot1.png)
+![Destination](./src//assets/screenshots/screenshot2.png)
+![Crew](./src//assets/screenshots/screenshot3.png)
+![Technology](./src//assets/screenshots/screenshot4.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/engmohamedtarek1/space-tourism](https://github.com/engmohamedtarek1/space-tourism)
+- Live Site URL: [https://spacetourism-website.vercel.app/](https://spacetourism-website.vercel.app/)
 
-## My process
+## My Process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [TailwindCSS](https://tailwindcss.com/) - For styles
+- **Semantic HTML5 markup** - Ensuring clear structure and accessibility of the content.
+- **CSS custom properties** - For creating reusable and maintainable styles.
+- **Flexbox** - Used for flexible layouts and aligning elements in a row or column.
+- **CSS Grid** - For creating complex grid-based layouts, especially for the page layout.
+- **Mobile-first workflow** - Designing and building from mobile view upwards for better responsiveness.
+- **[React](https://reactjs.org/)** - A powerful JavaScript library for building user interfaces, handling components, and state.
+- **[React Router](https://reactrouter.com/)** - For client-side routing, allowing seamless navigation between pages.
+- **[TailwindCSS](https://tailwindcss.com/)** - For utility-first CSS and rapid UI development.
+- **[Framer Motion](https://www.framer.com/motion/)** - For smooth animations and page transitions.
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
-### What I learned
+### Key Features Implemented
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+1. **Responsive Navigation**:
 
-To see how you can add code snippets, see below:
+   - Created a responsive navigation bar with a mobile menu (hamburger) that slides in.
+   - Implemented smooth transitions for menu open/close using Framer Motion.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+2. **Crew & Destination Pages**:
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+   - Displayed crew and destination data dynamically using React states and arrays.
+   - Added clickable buttons (bullets) to switch between crew members and destinations.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+3. **Smooth Image Fade**:
 
-### Continued development
+   - Applied a smooth gradient fade-out effect on images (e.g., crew images) for better visual experience.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+4. **Page Transitions**:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+   - Used Framer Motion to animate transitions between different pages/routes, providing a polished and fluid user experience.
 
-### Useful resources
+5. **Device-Specific Backgrounds**:
+   - Configured different background images for mobile, tablet, and desktop views using TailwindCSS’s responsive utility classes.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+---
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+### Steps in Building the Website
+
+1. **Setup the Project Environment**:
+
+   - Initialize a new React app.
+   - Install dependencies: `react-router-dom`, `styled-components`, `tailwindcss`, `framer-motion`.
+
+2. **Routing Setup**:
+
+   - Configured routing with React Router to handle navigation between pages (Home, Destination, Crew, Technology).
+
+3. **Component Structure**:
+
+   - Designed reusable components for `Header`, `Footer`, and the layout structure.
+   - Created separate components for each section (Home, Destination, Crew, etc.).
+
+4. **Mobile-First Development**:
+
+   - Began development with the mobile view, progressively enhancing the design for tablet and desktop sizes.
+
+5. **Styled Components & TailwindCSS**:
+
+   - Applied scoped component styling using `styled-components`.
+   - Used TailwindCSS utilities for faster layout adjustments and responsive design.
+
+6. **Data Rendering**:
+
+   - Fetched the crew and destination data from a static file and mapped the data to render dynamically on the page.
+   - Enabled crew member and destination switching using state management with React's `useState`.
+
+7. **Animations & Transitions**:
+
+   - Integrated Framer Motion to add smooth page transitions and animations for elements like menu, content fade-ins, etc.
+
+8. **Testing & Optimization**:
+   - Ensured that all pages were fully responsive across different device sizes.
+   - Optimized performance and tested for potential UI bugs.
+
+Here's a section on what you learned during the process of building the Space Tourism website:
+
+---
+
+## What I Learned
+
+1. **Handling Responsive Design**:
+
+   - Mastered the **mobile-first workflow**, ensuring the website adapts seamlessly from smaller screens to larger displays.
+   - Learned how to apply **device-specific backgrounds** using utility classes in TailwindCSS to optimize visuals for mobile, tablet, and desktop devices.
+
+2. **Managing State in React**:
+
+   - Gained experience in using **React hooks** like `useState` to manage dynamic data, such as switching between different crew members or destinations with simple and effective state management.
+
+3. **Component-Based Design**:
+
+   - Improved understanding of **modular design** by breaking down the website into reusable components, which enhanced both development efficiency and maintainability.
+
+4. **Animations with Framer Motion**:
+
+   - Learned how to implement smooth **animations and transitions** between pages using **Framer Motion**, making the user experience more polished and interactive.
+
+5. **Using CSS Gradients for Image Effects**:
+
+   - Learned how to create a **smooth fade-out effect on images** with CSS gradients, improving the visual presentation of crew and destination images.
+
+6. **Customizing TailwindCSS**:
+
+   - Gained better knowledge of **TailwindCSS** by utilizing custom configurations and responsive utilities to create a clean and consistent UI.
+
+7. **Client-Side Routing with React Router**:
+
+   - Improved skills in setting up **client-side routing** with **React Router**, allowing seamless navigation between different pages without reloading the browser.
+
+8. **Optimizing User Interface (UI)**:
+
+   - Developed the ability to optimize the UI for **accessibility** and **usability**, ensuring that the navigation, buttons, and content are easy to interact with across all devices.
+
+9. **Problem Solving**:
+   - Enhanced problem-solving skills by working through challenges like implementing the sticky navigation, smooth image effects, and dynamic content loading.
 
 ## Author
 
@@ -102,10 +167,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Frontend Mentor - [@engmohamedtarek1](https://www.frontendmentor.io/profile/engmohamedtarek1)
 - Twitter - [@engmohamedtar](https://www.twitter.com/engmohamedtar)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+❤️ Big Thanks to [Mohamed Beltagy]() for helping me a lot in using animations how to optimize the memory.
