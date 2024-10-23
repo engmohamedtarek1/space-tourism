@@ -53,7 +53,7 @@ const Planet = () => {
             {planetsName.map((planet) => (
               <li
               key={planet.name}
-                className={`${planet.name.toLowerCase() === planetName ? "border-b-4 text-white" : ""} py-2`}
+                className={`${planet.name.toLowerCase() === planetName ? "border-b-4 text-white" : ""} py-2 hover:border-b-4 hover:border-white/50`}
               >
                 <Link to={`/destination/${planet.name.toLowerCase()}`}>
                   {planet.name}
