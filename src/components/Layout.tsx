@@ -2,6 +2,7 @@
 import React, { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import { AnimatePresence } from "framer-motion";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const location = useLocation();
@@ -21,12 +22,14 @@ const Layout = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <div
-      className={`min-h-screen bg-cover bg-no-repeat ${getBackgroundClass()}`}
-    >
-      <Navbar />
-      <main>{children}</main>
-    </div>
+    <AnimatePresence mode="wait">
+      <div
+        className={`min-h-screen bg-cover bg-no-repeat ${getBackgroundClass()}`}
+      >
+        <Navbar />
+        <main>{children}</main>
+      </div>
+    </AnimatePresence>
   );
 };
 

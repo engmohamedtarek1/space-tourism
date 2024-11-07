@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { destinations } from "../data";
+import { motion } from "framer-motion";
 
 const Planet = () => {
   const { planetName } = useParams();
@@ -32,7 +33,13 @@ const Planet = () => {
   }
 
   return (
-    <div className="flex flex-col items-center gap-12 p-6 text-center lg:text-left">
+    <motion.div
+      className="flex flex-col items-center gap-12 p-6 text-center lg:text-left"
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
+      exit={{ y: "-100vh" }}
+    >
       {/* Title */}
       <div className="tracking-[0.1rem] lg:ml-36 lg:self-start">
         <span className="pr-4 font-bold opacity-25">01</span> PICK YOUR
@@ -52,7 +59,7 @@ const Planet = () => {
           <ul className="flex gap-6 uppercase text-light">
             {planetsName.map((planet) => (
               <li
-              key={planet.name}
+                key={planet.name}
                 className={`${planet.name.toLowerCase() === planetName ? "border-b-4 text-white" : ""} py-2 hover:border-b-4 hover:border-white/50`}
               >
                 <Link to={`/destination/${planet.name.toLowerCase()}`}>
@@ -83,7 +90,7 @@ const Planet = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

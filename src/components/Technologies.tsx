@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { technologies, Technology } from "../data";
+import { motion } from "framer-motion";
 
 const Technologies = () => {
   const [currentCrewIndex, setCurrentCrewIndex]: [
@@ -9,7 +10,13 @@ const Technologies = () => {
   const technology: Technology = technologies[currentCrewIndex];
 
   return (
-    <div className="flex flex-col gap-12 text-center lg:ml-36 lg:text-left">
+    <motion.div
+      className="flex flex-col gap-12 text-center lg:ml-36 lg:text-left"
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
+      exit={{ y: "-100vh" }}
+    >
       {/* Title */}
       <div className="tracking-[0.1rem] md:self-start md:pl-10 md:text-[1.5rem] lg:pl-0 lg:text-500">
         <span className="pr-4 font-bold opacity-25">03</span>
@@ -18,7 +25,7 @@ const Technologies = () => {
 
       {/* Content */}
 
-      <div className="md:msb-0 flex flex-col items-center gap-8 text-center mb-10 lg:mb-24 lg:flex-row lg:gap-14 lg:text-left">
+      <div className="md:msb-0 mb-10 flex flex-col items-center gap-8 text-center lg:mb-24 lg:flex-row lg:gap-14 lg:text-left">
         <div className="block md:hidden">
           <img
             src={technology.images.portrait}
@@ -75,7 +82,7 @@ const Technologies = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

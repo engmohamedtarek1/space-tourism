@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { crew, CrewMember } from "../data";
+import { motion } from "framer-motion";
 
 const Crew = () => {
   const [currentCrewIndex, setCurrentCrewIndex]: [
@@ -9,7 +10,13 @@ const Crew = () => {
   const crewMember: CrewMember = crew[currentCrewIndex];
 
   return (
-    <div className="flex flex-col gap-12 p-6 text-center lg:ml-36 lg:text-left">
+    <motion.div
+      className="flex flex-col gap-12 p-6 text-center lg:ml-36 lg:text-left"
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
+      exit={{ y: "-100vh" }}
+    >
       {/* Title */}
       <div className="tracking-[0.1rem] md:self-start md:pl-4 lg:pl-0 lg:text-500">
         <span className="pr-4 font-bold opacity-25">02</span>
@@ -62,7 +69,7 @@ const Crew = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
